@@ -25,7 +25,7 @@ body {
     justify-content: center;
     background-color: var(--Light-grayish-cyan);
     gap: 2vw;
-    font-size: clamp(17px, 1.1vw, 20px)
+    font-size: clamp(17px, 1.1vw, 18px)
 }
 
 main {

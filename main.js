@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Add event listeners to percentage buttons
 buttonsPercent.forEach(button => {
     button.addEventListener('click', () => {
         buttonsPercent.forEach(btn => btn.classList.remove('active'));
