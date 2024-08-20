@@ -1,0 +1,213 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Space Mono;
+    border: none;
+    font-weight: 700;
+    color: var(--Dark-grayish-cyan);
+}
+
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Light-grayish-cyan);
+    gap: 2vw;
+    font-size: clamp(17px, 1.1vw, 20px)
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--White);
+    padding: 25px;
+    max-width: 920px;
+    border-radius: 20px;
+}
+
+.calculation {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 10px;
+    min-width: 380px;
+}
+
+.divs {
+    width: 50%;
+}
+
+form {
+    width: 100%;
+    position: relative;
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 95%;
+    max-width: 379px;
+    padding: 10px;
+    background-color: var(--Very-light-grayish-cyan);
+    text-align: right;
+    background-repeat: no-repeat;
+    background-position: 12px;
+    font-size: 18px;
+    color: var(--Very-dark-cyan);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input:focus {outline-color: rgb(38, 194, 174);}
+
+#input-money {background-image: url(/images/icon-dollar.svg);}
+
+#input-people {background-image: url(/images/icon-person.svg);}
+
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.percent button {
+    width: 117px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    font-size: 20px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.percent button:hover {
+    background-color: hsla(172, 67%, 45%, 0.671);
+}
+
+#custom {
+    width: 117px;
+}
+
+#custom:placeholder-shown {
+    text-align: center;
+}
+
+.result {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 10px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.amount, .total {
+    display: grid;
+    align-items: center;
+    grid-template-rows: 2, 1fr;
+    grid-template-columns: 2, 1fr;
+    grid-template-areas: 
+    'title price'
+    'per price';
+    justify-content: space-between;
+}
+
+.amount {
+    margin-top: 20px;
+}
+
+.price {
+    grid-area: price;
+}
+
+.tip {
+    color: white;
+}
+
+.price {
+    color: var(--Strong-cyan);
+    font-size: 40px;
+}
+
+#reset {
+    width: 90%;
+    align-self: center;
+    padding: 10px 0px;
+    border-radius: 5px;
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#reset:hover {
+    background-color: var(--Light-grayish-cyan);
+}
+
+
+
+#error {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    right: 45px;
+    color: rgba(255, 0, 0, 0.596)
+}
+
+form .error-input {
+    outline-color: rgba(255, 0, 0, 0.541);
+}
+
+.percent .active {
+    background-color: hsla(172, 67%, 45%, 0.671);
+    color: var(--Very-dark-cyan);
+}
+
+@media screen and (max-width: 800px) {
+    .logo {
+        padding: 30px;
+    }
+
+    main {
+        justify-content: center;
+    }
+
+    .calculation {
+        gap: 40px
+    }
+
+    .result {
+        margin-top: 20px;
+        width: 80%;
+        height: 350px;
+        padding: 30px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    #reset {
+        width: 281px;
+    }
+}

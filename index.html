@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator | pablodev</title>
+
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/design.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <img class="logo" src="images/logo.svg" alt="Logo of site">
+    <main>
+
+        <div class="calculation divs">
+            
+            <form>
+                <label for="input-money">Bill</label>
+                <input id="input-money" type="number" placeholder="0">
+            </form>
+            
+            <div class="percent">
+
+                <span class="select-title">Select Tip %</span>
+
+                <div class="buttons">
+                    <button class="percent-button">5%</button>
+                    <button class="percent-button">10%</button>
+                    <button class="percent-button">15%</button>
+                    <button class="percent-button">25%</button>
+                    <button class="percent-button">50%</button>
+                    <input id="custom" type="text" placeholder="Custom">
+                </div>
+
+            </div>
+
+            <form>
+                <label for="input-people">Number of People</label>
+                <input id="input-people" type="number" placeholder="0">
+                <span id="error">Cant' be zero</span>
+            </form>
+
+        </div>
+
+        <div class="result divs">
+
+            <div class="amount">
+                <span class="tip">Tip Amount</span>
+                <span class="per">/ Person</span>
+                <span id="result-amount" class="price">$0.00</span>
+            </div>
+
+            <div class="total">
+                <span class="tip">Total</span>
+                <span class="per">/ Person</span>
+                <span id="result-total" class="price">$0.00</span>
+            </div>
+
+            <button id="reset">RESET</button>
+        </div>
+    </main>
+</body>
+</html>
