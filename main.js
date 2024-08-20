@@ -41,15 +41,7 @@ resetButton.addEventListener('click', () => {
     peopleVisor.classList.remove('error-input');
     errorMessage.style.display = 'none';
     buttonsPercent.forEach(btn => btn.classList.remove('active'));
-    customButton.value = ''; // Clear custom input
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    if (!peopleVisor.value || peopleVisor.value == 0) {
-        peopleVisor.focus();
-        peopleVisor.classList.add('error-input');
-        errorMessage.style.display = 'flex';
-    }
+    customButton.value = '';
 });
 
 buttonsPercent.forEach(button => {

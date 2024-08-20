@@ -24,7 +24,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--Light-grayish-cyan);
-    gap: 2vw;
+    gap: 1.2vw;
     font-size: clamp(17px, 1.1vw, 18px)
 }
 
@@ -76,9 +76,9 @@ input {
 
 input:focus {outline-color: rgb(38, 194, 174);}
 
-#input-money {background-image: url(/images/icon-dollar.svg);}
+#input-money {background-image: url(/./images/icon-dollar.svg);}
 
-#input-people {background-image: url(/images/icon-person.svg);}
+#input-people {background-image: url(/./images/icon-person.svg);}
 
 
 .buttons {
